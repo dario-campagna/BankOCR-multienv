@@ -49,8 +49,8 @@ jobs:
             - v1-dependencies-
 
       - run:
-        name: gradle dependencies
-        command: .\gradlew dependencies
+          name: gradle dependencies
+          command: .\gradlew dependencies
 
       - save_cache:
           paths:
@@ -58,8 +58,8 @@ jobs:
           key: v1-dependencies-{{ checksum "build.gradle" }}
 
       - run:
-        name: gradle test
-        command: .\gradle test
+          name: gradle test
+          command: .\gradle test
 
 workflows:
    build:
