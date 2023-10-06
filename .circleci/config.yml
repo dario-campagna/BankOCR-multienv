@@ -61,4 +61,4 @@ workflows:
   build:
     jobs:
       - build-linux
-      - build-windows
+      - build-win
