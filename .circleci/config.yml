@@ -1,4 +1,4 @@
-version: 2
+version: 2.1
 
 orbs:
   win: circleci/windows@5.0
@@ -48,11 +48,21 @@ jobs:
             - v1-dependencies-{{ checksum "build.gradle" }}
             - v1-dependencies-
 
-      - run: gradle dependencies
+      - run:
+        name: gradle dependencies
+        command: .\gradlew dependencies
 
       - save_cache:
           paths:
             - ~/.gradle
           key: v1-dependencies-{{ checksum "build.gradle" }}
 
-      - run: gradle test
+      - run:
+        name: gradle test
+        command: .\gradle test
+
+workflows:
+   build:
+    jobs:
+      - build-linux
+      - build-win
