@@ -17,7 +17,7 @@ jobs:
     steps:
       - checkout
       - run:
-          name: gradle test
+          name: test
           command: ./gradlew test
 
   test-win:
@@ -32,7 +32,8 @@ jobs:
     steps:
       - checkout
       - run:
-          name: gradle test
+          name: test
+          shell: bash.exe
           command: .\gradlew.bat test
 
 workflows:
