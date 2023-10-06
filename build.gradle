@@ -1,6 +1,5 @@
 plugins {
     id 'application'
-    id 'org.gradle.toolchains.foojay-resolver-convention' version '0.7.0'
 }
 
 group 'dssc.assignment.bank'
@@ -13,16 +12,6 @@ application {
 java {
     toolchain {
         languageVersion = JavaLanguageVersion.of(17)
-    }
-}
-
-toolchainManagement {
-    jvm {
-        javaRepositories {
-            repository("foojay") {
-                resolverClass = org.gradle.toolchains.foojay.FoojayToolchainResolver
-            }
-        }
     }
 }
 
