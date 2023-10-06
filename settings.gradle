@@ -1,5 +1,3 @@
-rootProject.name = 'Bank-OCR-assignment'
-
 plugins {
     id("org.gradle.toolchains.foojay-resolver") version "0.7.0"
 }
@@ -13,3 +11,5 @@ toolchainManagement {
         }
     }
 }
+
+rootProject.name = 'Bank-OCR-assignment'
